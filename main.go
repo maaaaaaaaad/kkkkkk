@@ -1,14 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func printAlph() {
 	alph := []rune{'a', 'b', 'c', 'd', 'e'}
 	for _, v := range alph {
-		fmt.Println(v)
+		time.Sleep(3000)
+		fmt.Printf("%c\n", v)
+	}
+}
+
+func printNum() {
+	for i := 1; i <= 5; i++ {
+		time.Sleep(3000)
+		fmt.Printf("%d\n", i)
 	}
 }
 
 func main() {
-	printAlph()
+	go printAlph()
+	go printNum()
+
+	time.Sleep(3000)
 }
