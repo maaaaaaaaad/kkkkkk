@@ -20,4 +20,10 @@ fun main() {
         println(counter)
         counter++
     } while (counter < 5 + 1)
+
+    val buffers = arrayOf("application", "presentation", "session", "transport", "network", "data_link", "physical")
+
+    for (buffer in buffers) {
+        println(buffer)
+    }
 }
