@@ -27,4 +27,8 @@ fun main() {
     for (buffer in buffers) {
         println(buffer)
     }
+
+    val rider = Rider("A", "C-Type", 100)
+    println("Rider: $rider")
+    println("Brand: ${rider.brand}")
 }
