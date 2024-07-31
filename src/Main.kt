@@ -31,4 +31,5 @@ fun main() {
     val rider = Rider("A", "C-Type", 100)
     println("Rider: $rider")
     println("Brand: ${rider.brand}")
+    println(rider.crack("lol"))
 }
