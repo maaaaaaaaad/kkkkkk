@@ -32,4 +32,7 @@ fun main() {
     println("Rider: $rider")
     println("Brand: ${rider.brand}")
     println(rider.crack("lol"))
+
+    val pf = PromotionFunc().isPromotionTarget(PromotionFuncArgs(addToCart = false, rates = 10))
+    println("Promotion Target for Function: $pf")
 }
