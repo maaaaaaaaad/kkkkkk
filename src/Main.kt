@@ -10,9 +10,7 @@ fun main(args: Array<String>) {
 
     val alice = persons.find { it.name == "Alice" }
     println("Alice set: $alice")
-    if (alice != null) {
-        alice.age = 20
-    }
+    if (alice != null) alice.age = 20
     println("New Alice set: $alice")
 }
 
