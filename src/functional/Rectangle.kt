@@ -1,8 +1,7 @@
 package functional
 
 class Rectangle(private val width: Double, private val height: Double) {
-    val isSquare: Boolean
-        get() = width == height
+    val isSquare: Boolean get() = width == height
 }
 
 fun main(args: Array<String>) {
