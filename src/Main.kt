@@ -6,4 +6,7 @@ fun main(args: Array<String>) {
     val privateAgePerson = persons.minBy { it.age ?: 0 }
     println("Max age set: $maxAgePerson")
     println("Empty age set: $privateAgePerson")
+    fun max(a: Int, b: Int): Int = if (a > b) a else b
+    println(max(1, 2))
 }
+
