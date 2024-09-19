@@ -1,4 +1,4 @@
-data class Person(val name: String, var age: Int? = null)
+import datas.Person
 
 fun main(args: Array<String>) {
     val persons = listOf(Person("Alice", 29), Person("Bob", 31), Person("Carol"))
