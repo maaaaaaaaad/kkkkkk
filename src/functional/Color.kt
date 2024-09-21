@@ -13,6 +13,12 @@ fun main(args: Array<String>) {
         Color.BLUE -> "B"
     }
 
-    val red = colors(Color.RED)
-    println(red)
+    fun mix(c1: Color, c2: Color) = when (setOf(c1, c2)) {
+        setOf(Color.RED, Color.BLUE) -> Color.GREEN
+        else -> Color.RED
+    }
+
+    val red = mix(Color.RED, Color.RED)
+    val green = mix(Color.RED, Color.BLUE)
+    println("red: $red, green: $green")
 }
