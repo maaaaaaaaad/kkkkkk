@@ -18,11 +18,17 @@ fun main(args: Array<String>) {
     println("New Alice set: $alice")
 
     fun eval(expr: Expr): Int = when (expr) {
-        is Num -> expr.value
+        is Num -> {
+            println("Expr value: $expr.value")
+            expr.value
+        }
+
         is Sum -> eval(expr.left) + eval(expr.right)
         else -> throw IllegalArgumentException("Unknown expression")
     }
 
     println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
+    val oneToTen = 1..10
+    oneToTen.forEach { println("It's too ten: $it") }
 }
 
