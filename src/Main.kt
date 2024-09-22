@@ -38,7 +38,7 @@ fun main(args: Array<String>) {
     val oneToTen = 1..10
     oneToTen.forEach { println("It's too ten: $it") }
 
-    for (i in 1..100) {
+    for (i in 100 downTo 1 step 2) {
         println(fizzBuzz(i))
     }
 }
