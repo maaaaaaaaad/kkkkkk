@@ -17,18 +17,12 @@ fun main(args: Array<String>) {
     if (alice != null) alice.age = 20
     println("New Alice set: $alice")
 
-    fun eval(expr: Expr): Int {
-        if (expr is Num) {
-            val n = expr as Num
-            return n.value
-        }
-        if (expr is Sum) {
-            return eval(expr.left) + eval(expr.right)
-        }
-        throw IllegalArgumentException("Unknown expression")
+    fun eval(expr: Expr): Int = when (expr) {
+        is Num -> expr.value
+        is Sum -> eval(expr.left) + eval(expr.right)
+        else -> throw IllegalArgumentException("Unknown expression")
     }
 
     println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
-
 }
 
