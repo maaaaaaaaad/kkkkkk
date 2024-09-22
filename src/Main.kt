@@ -4,6 +4,13 @@ interface Expr
 class Num(val value: Int) : Expr
 class Sum(val left: Expr, val right: Expr) : Expr
 
+fun fizzBuzz(i: Int) = when {
+    i % 15 == 0 -> "FizzBuzz: $i"
+    i % 3 == 0 -> "Fizz: $i"
+    i % 5 == 0 -> "Buzz: $i"
+    else -> "$i "
+}
+
 fun main(args: Array<String>) {
     val persons = listOf(Person("Alice", 29), Person("Bob", 31), Person("Carol"))
     val maxAgePerson = persons.maxBy { it.age ?: 0 }
@@ -30,5 +37,9 @@ fun main(args: Array<String>) {
     println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
     val oneToTen = 1..10
     oneToTen.forEach { println("It's too ten: $it") }
+
+    for (i in 1..100) {
+        println(fizzBuzz(i))
+    }
 }
 
